@@ -5,7 +5,7 @@
 # - Ask if user is using Kali linux if apt
 # - Prompt for BSPWM install
 # - Prompt for Password list installs
-
+# - My first commit test
 
 #!!!	Github repo variables and directories	!!!
 #Driver for the rtl8812au chipset wireless card
