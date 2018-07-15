@@ -3,9 +3,11 @@
 # TODO: Variables for each github repo 
 github="https://www.github.com/x3830s/"
 linux_environment="https://www.github.com/x3830s/Linux-Environment"
+powerline_fonts="https://www.github.com/powerline/fonts"
 
 # TODO: Variables for each github repo directory
 linux_environment_dir="Linux-Environment"
+powerline_fonts_dir="fonts"
 
 # Check and download Linux-Environment repo
 github_repo () {
@@ -25,16 +27,21 @@ github_repo () {
 			echo -e "\n[+] The package at $1 was successful, located in $2 \n" >> install.log
 		fi
 	fi
-	}
+}
 
+# TODO: Functions to create the working autoscript
+github_repo $linux_environment $linux_environment_dir
+github_repo $powerline_fonts $powerline_fonts_dir
+
+# TODO: Install Powerline fonts
+./fonts/install.sh
+
+echo -e "\n[+] Moved .vimrc to ~.\n" >> install.log
 # TODO: Move .vimrc to appropriate folder
 mv "$linux_environment_dir/.vimrc" ./home
 echo -e "\n[+] Moved .vimrc to ~.\n" >> install.log
+
 # TODO: Move .xresources to appropriate folder
 
-# TODO: Powerline fonts
  
-# TODO: Functions to create the working autoscript
 
-# TODO: Basic install vs Full install
-github_repo $linux_environment $linux_environment_dir
