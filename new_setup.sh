@@ -9,7 +9,7 @@ powerline_fonts="https://www.github.com/powerline/fonts"
 linux_environment_dir="Linux-Environment"
 powerline_fonts_dir="fonts"
 
-#TODO: Check if user is root or not (generally for Kali)
+# Check if user is root or not (generally for Kali)
 if [ "$(whoami)" = "root" ]
 then
 	dir='/root'
@@ -20,7 +20,7 @@ fi
 
 # Check and download Linux-Environment repo
 github_repo () {
-	# TODO: Create a github folder with checks to see if it exists
+	# Create a github folder with checks to see if it exists
 	if [ ! -d "$dir/github" ]
 	then
 		echo "$0: You do not have a '$dir/github' folder, making one ..." >&2
@@ -62,7 +62,7 @@ github_repo $powerline_fonts $powerline_fonts_dir
 
 # TODO: Install Powerline fonts
 # # # # TODO: If exists do not run install script 
-# # # # TODO: Place correct path to github folder
+# # # # Place correct path to github folder
 if [ ! -e "$dir/.local/share/fonts/Meslo LG S Regular for Powerline" ]
 then
 	echo "Powerline Fonts already installed"	
@@ -77,6 +77,7 @@ echo -e "\n[+] Moved .vimrc to ~.\n"
 echo -e "\n[+] Moved .vimrc to ~.\n" >> install.log
 
 # TODO: Move .xresources to appropriate folder
+
 
  
 
